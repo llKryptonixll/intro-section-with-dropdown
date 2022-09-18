@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="app.js" defer></script>
+
+    <title>Document</title>
+</head>
+<body class="font-epilogue overflow-x-hidden">
+    
+    <!-- desktop navigation -->
+    <nav class="bg-almost-white h-20 flex items-center">
+        <ul class="flex text-medium-gray font-semibold justify-between items-center w-full">
+            <div class="flex gap-14 p-10">
+                <li>
+                    <img src="images/logo.svg" alt="company-logo">
+                </li>
+                <li class="nav-items lg:flex hidden relative">
+                    <div id="features-dropdown-btn" class="hover:text-almost-black cursor-pointer">Features</div>
+                    <img id="arrow-down-features" class="w-3 h-2" src="images/icon-arrow-down.svg" alt="arrow-down-navbar-item">
+                    <img id="arrow-up-features" class="hidden" src="images/icon-arrow-up.svg" alt="arrow-up-navbar-item">
+
+                    <!-- features dropdwon -->
+                    <div id="features-dropdown" class="bg-almost-white absolute top-14 right-0 w-40 h-44 shadow-neutral-400 shadow-2xl rounded-lg justify-items-center content-center gap-3 font-medium hidden grid">
+                        <div class="grid grid-cols-3 place-items-center w-5/6">
+                            <img class="col-span-1" src="images/icon-todo.svg" alt="">
+                            <a class="w-full col-span-2 hover:text-almost-black" href="">Todo List</a>
+                        </div>
+                        <div class="grid grid-cols-3 w-5/6 place-items-center">
+                            <img class="col-span-1" src="images/icon-calendar.svg" alt="">
+                            <a class="col-span-2 w-full hover:text-almost-black" href="">Calendar</a>
+                        </div>
+                        <div class="grid grid-cols-3 w-5/6 place-items-center">
+                            <img class="col-span-1" src="images/icon-reminders.svg" alt="">
+                            <a class="col-span-2 w-full hover:text-almost-black" href="images/icon-reminders.svg">Reminders</a>
+                        </div>
+                        <div class="grid grid-cols-3 w-5/6 place-items-center">
+                            <img class="col-span-1" src="images/icon-planning.svg" alt="">
+                            <a class="col-span-2 w-full hover:text-almost-black" href="">Planning</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-items lg:flex hidden relative">
+                    <div id="company-dropdown-btn" class="hover:text-almost-black cursor-pointer">Company</div>
+                    <img id="arrow-down-company" class="w-3 h-2" src="images/icon-arrow-down.svg" alt="arrow-down-navbar-item">
+                    <img id="arrow-up-company" class="hidden" src="images/icon-arrow-up.svg" alt="arrow-up-navbar-item">
+
+                    <!-- company dropdwon -->
+                    <div id="company-dropdown" class="bg-almost-white absolute top-14 w-32 h-32 hidden shadow-neutral-400 shadow-2xl rounded-lg place-items-center grid font-medium">
+                        <a class="hover:text-almost-black" href="">History</a>
+                        <a class="hover:text-almost-black" href="">Our Team</a>
+                        <a class="hover:text-almost-black" href="">Blog</a>
+                    </div>
+                </li>
+                <li class="nav-items hover:text-almost-black lg:grid hidden">
+                    <a href="#">Careers</a>
+                </li>
+                <li class="nav-items hover:text-almost-black lg:grid hidden">
+                    <a href="#">About</a>
+                </li>
+            </div>
+            <div class="flex p-10">
+                <li class="w-28 h-12 place-items-center hover:text-almost-black lg:grid hidden">
+                    <a href="#">Login</a>
+                </li>
+                <li class="border-2 hover:border-almost-black border-medium-gray rounded-2xl w-28 h-12 place-items-center hover:text-almost-black text-medium-gray lg:grid hidden">
+                    <a href="#">Register</a>
+                </li>
+            </div>
+        </ul> 
+
+        <!-- dropdown-toogle -->
+        <div class="w-28 h-12 cursor-pointer relative z-30">
+            <img id="open-sidebar-btn" class="lg:hidden block p-5" src="images/icon-menu.svg" alt="open-navbar-button">
+            <img id="close-sidebar-btn" class="hidden p-3" src="images/icon-close-menu.svg" alt="close-navbar-button">
+        </div>
+    </nav>
+
+    <!-- mobile navigation -->
+    <aside id="sidebar" class="bg-almost-white w-64 fixed right-0 top-0 h-full hidden z-20 overflow-y-auto">
+        <ul class="relative top-24 grid content-start gap-6 w-5/6 justify-self-center">
+            <li class="grid gap-5">
+                <div class="nav-items">
+                    <div id="features-dropdown-btn-mobile" class="hover:text-almost-black cursor-pointer">Features</div>
+                    <img id="arrow-down-features-mobile" class="w-3 h-2" src="images/icon-arrow-down.svg" alt="arrow-down-navbar-item">
+                    <img id="arrow-up-features-mobile" class="hidden" src="images/icon-arrow-up.svg" alt="arrow-up-navbar-item">
+                </div>
+
+                <!-- features dropdwon -->
+                <div id="features-dropdown-mobile" class="w-32 h-32 justify-items-center content-center gap-3 hidden font-medium grid">
+                    <div class="grid grid-cols-3 place-items-center w-5/6">
+                        <img class="col-span-1" src="images/icon-todo.svg" alt="">
+                        <a class="w-full col-span-2 hover:text-almost-black" href="">Todo List</a>
+                    </div>
+                    <div class="grid grid-cols-3 w-5/6 place-items-center">
+                        <img class="col-span-1" src="images/icon-calendar.svg" alt="">
+                        <a class="col-span-2 w-full hover:text-almost-black" href="">Calendar</a>
+                    </div>
+                    <div class="grid grid-cols-3 w-5/6 place-items-center">
+                        <img class="col-span-1" src="images/icon-reminders.svg" alt="">
+                        <a class="col-span-2 w-full hover:text-almost-black" href="images/icon-reminders.svg">Reminders</a>
+                    </div>
+                    <div class="grid grid-cols-3 w-5/6 place-items-center">
+                        <img class="col-span-1" src="images/icon-planning.svg" alt="">
+                        <a class="col-span-2 w-full hover:text-almost-black" href="">Planning</a>
+                    </div>
+                </div>
+            </li>
+            <li class="grid gap-5">
+                <div class="nav-items">
+                    <div id="company-dropdown-btn-mobile" class="hover:text-almost-black cursor-pointer">Company</div>
+                    <img id="arrow-down-company-mobile" class="w-3 h-2" src="images/icon-arrow-down.svg" alt="arrow-down-navbar-item">
+                    <img id="arrow-up-company-mobile" class="hidden" src="images/icon-arrow-up.svg" alt="arrow-up-navbar-item">
+                </div>
+
+                <!-- company dropdwon -->
+                <div id="company-dropdown-mobile" class="w-32 h-32 hidden font-medium relative left-5 grid">
+                    <a class="hover:text-almost-black" href="">History</a>
+                    <a class="hover:text-almost-black" href="">Our Team</a>
+                    <a class="hover:text-almost-black" href="">Blog</a>
+                </div>
+            </li>
+            <li>
+                <a href="#">Careers</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <div class="grid">
+                <li class="w-5/6 h-12 place-items-center hover:text-almost-black grid justify-self-center">
+                    <a href="#">Login</a>
+                </li>
+                <li class="border-2 hover:border-almost-black grid border-medium-gray rounded-2xl w-5/6 h-12 place-items-center hover:text-almost-black text-medium-gray justify-self-center">
+                    <a href="#">Register</a>
+                </li>
+            </div>
+        </ul>
+    </aside>
+
+    <!-- black layer for opened sidebar -->
+    <div id="background-layer" class="bg-black opacity-80 fixed w-full h-full top-0 hidden"></div>
+
+    <main class="xl:min-h-800px min-h-[calc(100vh_-_80px)] grid grid-cols-2 xl:grid-rows-1 grid-rows-2 place-items-center xl:gap-0 gap-10 bg-almost-white">
+        <article class="grid items-center xl:w-5/6 xl:h-[calc(47%)] w-full h-full gap-20 xl:row-start-1 row-start-2 col-span-2 xl:col-span-1">
+            <div class="grid xl:gap-14 gap-10">
+                <h1 class="text-almost-black xl:text-7xl md:text-5xl text-4xl font-extrabold text-center xl:text-left">Make <br class="xl:block hidden"> remote work</h1>
+                <p class="text-medium-gray text-xl tracking-wide text-center xl:text-left p-1">
+                    Get your team in sync, no matter your location.<br class="xl:block hidden">
+                    Streamline processes create team rituals, and<br class="xl:block hidden">
+                    watch productivity soar.
+                </p>
+                <button class="xl:justify-self-left xl:justify-self-start justify-self-center w-44 h-14 rounded-2xl text-almost-white border-almost-black border-2 cursor-pointer font-bold text-xl bg-almost-black hover:bg-transparent hover:text-almost-black hover:border-almost-black">Learn more</button>
+            </div>
+            <footer class="flex xl:self-end justify-between w-5/6 xl:h-6 h-4 xl:justify-self-start justify-self-center self-start">
+                <img src="images/client-databiz.svg" alt="footer-databiz-client">
+                <img src="images/client-audiophile.svg" alt="footer-audiophile-client">
+                <img src="images/client-meet.svg" alt="footer-meet-client">
+                <img src="images/client-maker.svg" alt="footer-maker-client">
+            </footer>
+        </article>
+
+        <div class="xl:w-5/6 xl:h-5/6 w-full h-full grid place-items-center xl:row-span-2 row-start-1 xl:col-span-1 col-span-2">
+            <img class="" height="900px" width="500px" src="images/image-hero-desktop.png" alt="">
+        </div>
+    </main>
+
+</body>
+</html>
